@@ -1,0 +1,48 @@
+<div class="container text-center">
+<h1>Lets Eat Burgers Y'all!</h1>
+<img src="/assets/img/burger.png" alt="Burger and fries image" width="300">
+  <div class="row">
+    <div class="col">
+      <div class="burgers-not-devoured">
+        <h2>Delicious Burgers Hot and Ready!</h2>
+        <div class="text-left">
+          {{#each burgers}}
+          {{#unless devoured}}
+          {{> burgers/burger-eat devour=true}}
+          {{/unless}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+    <div class="col-5 mx-auto">
+      <div class="add-burger">
+        <h2>Add a burger</h2>
+        <form class="create-form">
+          <div>
+            <input type="text" id="burger" name="name">
+          </div>
+          <div>
+              <br>
+          <button class="btn btn-warning mx-auto" type="submit">Add burger</button>
+          </div>
+            <div class="form-group mx-auto">
+            <label for="burger">Enter Your Fav Burger Then Click Submit Button</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col" class="text-left">
+      <div class="burgers-devoured">
+        <h2>Lost your chance ask for your fav burger!</h2>
+
+        <div>
+          {{#each burgers}}
+          {{#if devoured}}
+          {{> burgers/burger-devoured}}
+          {{/if}}
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
