@@ -14,9 +14,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/markpython86/Burger.git/issues"
+    "url": "https://github.com/markpython86/Burger/issues"
   },
-  "homepage": "https://github.com/markpython86/Burger.git#readme",
+  "homepage": "https://github.com/markpython86/Burger#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
