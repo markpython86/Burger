@@ -12,12 +12,12 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 // to retain the directory public as the main directory
-app.use(bodyParser.static("public"));
+app.use(express.static((process.cwd() +"/public"));
 
 
 //This is a built-in middleware function in Express. 
 //It parses incoming requests with urlencoded payloads and is based on body-parser.
-app.use(express.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: false }));
 // console.log("testing: "+testing)
 // Parse request body as JSON
 app.use(express.json());
