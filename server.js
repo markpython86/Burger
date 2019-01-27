@@ -12,7 +12,7 @@ var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
 // to retain the directory public as the main directory
-app.use(express.static((process.cwd() +"/public"));
+app.use(express.static(process.cwd() +"/public"));
 
 
 //This is a built-in middleware function in Express. 
